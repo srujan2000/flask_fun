@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="home">
+  <h1 id="heading">{{username}}</h1>
+    <hr>
+    {% for post in posts.items %}
+       <div class="card">
+         <small class="date">Date : {{ post.date.strftime('%d-%m-%Y') }} </small>
+         <p class="author">  {{username}} </p>
+         <hr>
+         <h2 class="title"><a href="{{url_for('post',user_id = post.id)}}">{{post.title}}</a></h2>
+         <hr>
+         <p class="content">{{post.content}}</p>
+       </div>
+    {% endfor %}   
+</div>
+
+<div class="pagination">
+  {% for page_no in posts.iter_pages() %}
+      {% if page_no %}
+        {% if posts.page == page_no %}
+          <button style="background-color: cyan;"><a href="{{url_for('user_posts',page = page_no,user_name = username)}}">{{page_no}}</a></button>
+        {% else %}
+        <button ><a href="{{url_for('user_posts',page = page_no,user_name = username)}}">{{page_no}}</a></button>
+        {% endif %}
+      {% else %}
+       <span>...</span>
+      {% endif %}
+  {% endfor %}
+  </div>
+
+
+
+
+{% endblock content %}

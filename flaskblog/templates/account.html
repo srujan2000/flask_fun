@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="account">
+    <h1 id="heading">Account</h1>
+    <hr>
+    <div class="image">
+        <img src= {{image}} height="120"  width="120">
+    </div>
+
+    <form class="form" method="post" action=""  enctype="multipart/form-data">
+        {{ form.hidden_tag() }} 
+      <label for="username">{{form.username.label}}</label>
+      {% if form.username.errors %}
+           {{form.username (style="border: 2px solid red;")}}
+        {% for error in form.username.errors %}
+            <small style="color: red;">{{error}}</small>
+        {% endfor %}
+      {% else %}
+          {{form.username}}
+      {% endif %}
+      
+      <label for="email">{{form.email.label}}</label>
+      {% if form.email.errors %}
+          {{form.email (style="border: 2px solid red;")}} 
+    {% for error in form.email.errors %}
+        <small style="color: red;">{{error}}</small>
+    {% endfor %}
+     {% else %}
+        {{form.email}}
+    {% endif %}
+
+    <label for="picture">{{form.picture.label}}</label>
+     {{form.picture}}
+    {% if form.picture.errors %}
+      {% for error in form.picture.errors %}
+      <span style="color: red;">{{error}}</span><br>
+      {% endfor %}
+    {% endif %}
+
+
+    {{form.submit}}
+    </form>
+
+    <div class="change_password">
+        <a href="{{url_for('change_password')}}">Change Password</a>
+    </div>
+</div>
+
+{% endblock content %}
+

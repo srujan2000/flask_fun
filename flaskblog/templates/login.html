@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+     <div id="login">
+         <h1>Login</h1>
+         <strong>Enter the details to login</strong>
+         <hr>
+         <form class="form" method ="POST" action="">
+           {{ form.hidden_tag() }}
+          <label for="email">{{form.email.label}}</label>
+          {% if form.email.errors %}
+              {{form.email (style="border: 2px solid red;")}}
+              {% for error in form.email.errors %}
+                  <small style="color: red;">{{error}}</small>
+              {% endfor %}
+          {% else %}
+           {{form.email}}
+          {% endif %}
+
+          <label for="password">{{form.password.label}}</label>
+            {% if form.password.errors %}
+              {{form.password (style="border: 2px solid red;")}}
+
+              {% for error in form.email.errors %}
+                  <small style="color: red;">{{error}}</small>
+                {% endfor %}
+            {% else %}
+                 {{form.password}}
+            {% endif %}
+              
+         
+          
+        <div class="form-group">
+          {{form.submit}}
+          </div>
+          <small id="forgot"><a href="{{url_for('reset_password_token')}}">Forgot Password?</a></small>
+        </form>
+        
+        <small>Need an Account<a href="{{url_for('register')}}">Sign up Now</a></small>
+      </div>
+{% endblock content %}

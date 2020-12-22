@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="newpost">
+    <h1>Update Post</h1>
+
+    <hr>
+
+    <form class="form" method ="POST" action="">
+        {{ form.hidden_tag() }}
+       <label for="title">{{form.title.label}}</label>
+       {% if form.title.errors %}
+           {{form.title (style="border: 2px solid red;")}}
+           {% for error in form.title.errors %}
+               <small style="color: red;">{{error}}</small>
+           {% endfor %}
+       {% else %}
+        {{form.title(class="title")}}
+       {% endif %}
+
+       <label for="content">{{form.content.label}}</label>
+         {% if form.content.errors %}
+           {{form.content (style="border: 2px solid red;")}}
+
+           {% for error in focontent.errors %}
+               <small style="color: red;">{{error}}</small>
+             {% endfor %}
+         {% else %}
+              {{form.content (class="content")}}
+         {% endif %}
+           
+      
+       
+     <div class="form-group">
+       {{form.submit}}
+       </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <div class="post">
+     <h1>Post</h1>  
+
+     <hr>
+
+     <!-- Modal START -->
+     <div class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h3>Please confirm to delete</h3>
+         <button class="delete"><a href="{{url_for('delete_post',post_id = post.id)}}">Confirm</a></button>
+      </div>
+   </div>
+   <!-- Modal END -->
+
+      <div class="card">
+          <h1>Title : {{post.title}}</h1>
+          <hr>
+          <p>{{post.content}}</p>
+          <hr>
+          <button class="update"><a  href="{{url_for('update',post_id = post.id)}}">Update</a></button>
+          <button class="delete" id="delete"><a  href="#">Delete</a></button>
+      </div>
+
+
+   </div>
+
+
+   <script>
+      var modal = document.querySelector(".modal")
+      
+      var deletebtn = document.getElementById('delete')
+
+      var span = document.querySelector('.close')
+
+
+
+      deletebtn.onclick = function(){
+         modal.style.display = "block"
+      }
+
+      span.onclick = function(){
+         modal.style.display = "none"
+      }
+
+
+
+
+   </script>
+{% endblock content %}

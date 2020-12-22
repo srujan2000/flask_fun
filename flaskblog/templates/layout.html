@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+    </style>
+    {% if title %}
+        <title>{{title}}</title>
+    {% else %}
+       <title>Blog</title>
+    {% endif %}
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar-brand">
+             <a href="{{url_for('home')}}">Srujan Blogs</a>
+        </div>
+        <ul class="lists">
+            {% if current_user.is_authenticated %}
+                <li class="list-items"><a href="{{url_for('account')}}">Account</a></li>
+                <li class="list-items"><a href="{{url_for('newpost')}}">New Post</a></li>
+                <li class="list-items"><a href="{{url_for('logout')}}">Logout</a></li>
+            {% else %}
+                <li class="list-items"><a href="{{url_for('register')}}">Register</a></li>
+                <li class="list-items"><a href="{{url_for('login')}}">Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category,message in messages %}
+            <div class="flash_msg" >{{message}}</div>
+        {% endfor %}
+       {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+
+    <script>
+        var flash = document.querySelector('.flash_msg')
+        setTimeout(function(){
+            flash.style.display = 'none'
+        },2000)
+    </script>
+</body>
+</html>

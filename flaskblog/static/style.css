@@ -1,0 +1,469 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #D1D5DB;
+}
+
+
+/* Layout.html Start */
+#navbar{
+    padding: 10px 10px;
+    background-color: #333333;
+    margin-bottom: 50px;
+}
+
+.navbar-brand{
+    display: inline;
+    font-size: 2rem;
+}
+
+.navbar-brand a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.lists{
+    list-style: none;
+    text-align: right;
+    margin-top: -45px;
+}
+
+.list-items{
+    display: inline;
+    padding-right: 10px;
+}
+
+.list-items a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.list-items a:hover{
+    color: #000000;
+}
+
+/* Layout.html END */
+
+/* Login.html start */
+
+#login{
+    text-align: center;
+}
+
+#login h1{
+    font-size: 2.5rem;
+}
+
+#login strong{
+    font-size: 1.2rem;
+}
+
+.form label{
+    margin-top: 5px;
+    font-size: 1.8rem;
+    display: block;
+}
+
+.form input{
+    margin:auto;
+    display: block;
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.form small a{
+    text-decoration: none;
+}
+
+#forgot{
+    margin-top: 10px;
+}
+
+#forgot a{
+    text-decoration: none;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    margin-top:20px;
+    padding: 5px 20px;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+small a{
+    padding-left: 5px;
+}
+
+/* Login.html END */
+
+
+
+/* Register.html start */
+#register{
+    text-align: center;
+}
+
+#register h1{
+    font-size: 2.5rem;
+}
+
+#register strong{
+    font-size: 1.2rem;
+}
+
+.form label{
+    margin-top: 5px;
+    font-size: 1.8rem;
+    display: block;
+}
+
+.form input{
+    margin:auto;
+    display: block;
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#already a{
+    text-decoration: none;
+}
+
+#submit{
+    display: block;
+    margin: auto;
+    margin-top:20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+/* register.html END */
+
+/* newpost.html START */
+.newpost form{
+    text-align: center;
+    
+}
+.newpost h1{
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+}
+
+.newpost .title{
+    font-size: 1.8rem;
+    height: 50px;
+}
+
+.content{
+    /* text-align:justify; */
+    height: 200px;
+}
+
+/* newpost.html END */
+
+/* HOME.HTML START */
+
+.home #heading{
+    text-align: center;
+    font-size: 3rem;
+    color: chocolate;
+}
+
+.card{
+    background-color: #ffffff;
+    max-width: 400px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px 10px;
+    margin-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.date{
+    display: inline;
+}
+
+.author{
+    display: inline;
+    text-align: right;
+    padding-left: 150px;
+}
+
+.author a {
+   text-decoration: none;
+}
+
+/* .postname{
+    text-align: center;
+}
+
+.postname a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.postname a:hover{
+    color: cyan;
+} */
+
+.title{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.title a{
+    text-decoration: none;
+}
+
+.title a:hover{
+  color: cyan;
+}
+
+.content{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.pagination{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pagination button{
+    border: none;
+    padding: 5px 10px;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.pagination button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* HOME.HTML END */
+
+
+/* new post.html start */
+
+.post{
+    font-family: 'Roboto', sans-serif;
+}
+
+.post h1{
+    text-align: center;
+}
+
+.post .card{
+    text-align: center;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+   
+}
+
+.post .update  {
+    margin: 30px;
+    background-color: #0a821c;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    outline: none;
+}
+
+.post .update a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+.post .delete {
+    margin-top: 30px;
+    background-color: red;
+    text-decoration: none;
+    padding: 10px;
+    color: #000000;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+
+.post .delete a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+.modal{
+    padding: 10px;
+    display: block;
+    margin: auto;
+    width: 400px;
+    background-color: #ffffff;
+    display: none;
+}
+
+.close{
+    float: right;
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal button{
+    display: block;
+    margin: auto;
+}
+
+/* newpost.html end */
+
+/* Account.html START */
+
+.account{
+   text-align: center;
+}
+
+.account #heading{
+    text-align: center;
+    font-size: 3rem;
+    color: crimson;
+}
+
+.account img{
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.picture{
+   font-size: 12px;
+}
+
+.change_password{
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.change_password a{
+    text-decoration: none;
+}
+
+/* Account.html END */
+
+
+/* change_password.html START*/
+
+.change_password{
+    text-align: center;
+}
+
+.change_password h1{
+    color: darkorange;
+}
+
+/* change_password.html END*/
+
+
+/* FLASH MSG */
+.flash_msg{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+    padding: 10px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
+/* ERROR PAGE */
+
+.error{
+    text-align: center;
+}
+
+.error h1{
+    font-size: 3rem;
+    color: red;
+}
+
+.error p{
+    font-size: 1.2rem;
+}
+
+
+@media (min-width:476px) and (max-width:665px){
+    .navbar-brand{
+        font-size: 1.5rem;
+    }
+
+    .lists{
+        margin-top: -32px;
+    }
+
+   .list-items a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+}
+
+
+@media only screen and (max-width:475px){
+    .navbar-brand{
+        font-size: 1.2rem;
+    }
+
+    .lists{
+        margin-top: -26px;
+    }
+
+   .list-items a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+   }
+
+    .card{
+        max-width: 320px;
+    }
+    .form input{
+        width: 300px;
+    }
+
+}
